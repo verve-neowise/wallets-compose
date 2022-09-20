@@ -27,10 +27,10 @@ fun WalletList(wallets: List<Wallet>) {
 @Composable
 private fun DefaultPreview() {
     val wallets = listOf(
-        Wallet(name = "Bank 1", color = Red, date = "01.03.2023", balance = 150.0),
-        Wallet(name = "Bank 2", color = Color.Green,  date = "01.03.2023", balance = 350.0),
-        Wallet(name = "Bank 3", color = Color.Blue,  date = "01.03.2023", balance = 250.0),
-        Wallet(name = "Bank 4", color = Color.Yellow,  date = "01.03.2023", balance = 1100.0),
+        Wallet(name = "Bank 1", color = Wallet.Color.RED, date = "01.03.2023", balance = 150.0),
+        Wallet(name = "Bank 2", color = Wallet.Color.GREEN,  date = "01.03.2023", balance = 350.0),
+        Wallet(name = "Bank 3", color = Wallet.Color.BLUE,  date = "01.03.2023", balance = 250.0),
+        Wallet(name = "Bank 4", color = Wallet.Color.YELLOW,  date = "01.03.2023", balance = 1100.0),
     )
 
     WalletList(wallets = wallets)

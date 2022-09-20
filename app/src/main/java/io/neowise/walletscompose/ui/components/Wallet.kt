@@ -15,8 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.neowise.walletscompose.domain.model.Wallet
 import io.neowise.walletscompose.ui.theme.Dark
-import io.neowise.walletscompose.ui.theme.Purple500
-import io.neowise.walletscompose.ui.theme.Purple700
 import io.neowise.walletscompose.ui.theme.Red
 
 @Composable
@@ -36,7 +34,7 @@ fun WalletItem(wallet: Wallet, onTopUp: () -> Unit = { }, onDelete: () -> Unit =
                 Text(
                     text = wallet.name,
                     style = TextStyle(fontWeight = FontWeight.Bold),
-                    color = wallet.color
+                    color = wallet.color.color
                 )
                 Text(text = wallet.date)
             }
@@ -76,7 +74,7 @@ fun WalletItem(wallet: Wallet, onTopUp: () -> Unit = { }, onDelete: () -> Unit =
 private fun DefaultPreview() {
     val wallet = Wallet(
         name = "Bank",
-        color = Red,
+        color = Wallet.Color.RED,
         date = "02.10.2022",
         balance = 150.0
     )
